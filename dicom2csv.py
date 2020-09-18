@@ -5,7 +5,7 @@ import SimpleITK as sitk
 
 
 def loadDicomSeries(data_dir):
-    
+
     names = sitk.ImageSeriesReader.GetGDCMSeriesFileNames(data_dir)
     reader = sitk.ImageSeriesReader()
     reader.SetFileNames(names)
@@ -57,8 +57,8 @@ if __name__ == '__main__':
 
     data_dir = '.'
     csv_name = "points.csv"
-    minI = 400
-    maxI = 1000
+    minI = 500
+    maxI = 800
 
     if len(sys.argv)>1:
         data_dir = sys.argv[1]
