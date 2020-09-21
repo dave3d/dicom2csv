@@ -46,7 +46,7 @@ def dicomSeries2CSV(data_dir, csv_name, minI, maxI):
 
 
     with open(csv_name, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=' ',
+        csvwriter = csv.writer(csvfile, delimiter=',',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
         csvwriter.writerow(['X', 'Y', 'Z', 'Intensity'])
         for p in pts:
